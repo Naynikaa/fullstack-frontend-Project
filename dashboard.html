@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard – Company Careers</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <h1>Company Careers</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+      <a href="#" id="dashboardLink" style="display: none;">Dashboard</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="details">
+      <h2>My Dashboard</h2>
+      <p>Welcome back! Here are your job applications.</p>
+      <div id="applicationsList">
+        <!-- Applications will be loaded here -->
+      </div>
+      <button onclick="window.location.href='jobs.html'">Browse More Jobs</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Company Careers Portal</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

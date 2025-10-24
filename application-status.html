@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Status – Company Careers</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <h1>Company Careers</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+      <a href="#" id="dashboardLink" style="display: none;">Dashboard</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="details">
+      <h2>Application Status</h2>
+      <div id="statusMessage">
+        <p><strong>Job Applied For:</strong> <span id="appliedJob">Job Title</span></p>
+        <p><strong>Status:</strong> Submitted Successfully</p>
+        <p>Thank you for applying! Your application has been received and is under review. We'll get back to you soon.</p>
+        <p><strong>Application ID:</strong> APP-12345 (Example)</p>
+        <p><strong>Next Steps:</strong> Check your email for updates or log in to track progress.</p>
+      </div>
+      <button onclick="window.location.href='jobs.html'">Browse More Jobs</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Company Careers Portal</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

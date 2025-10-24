@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home – Company Careers</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <h1>Company Careers</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+      <a href="#" id="dashboardLink" style="display: none;">Dashboard</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Find Your Dream Job</h1>
+    <p>Explore opportunities at top companies and build your career.</p>
+    <button onclick="window.location.href='jobs.html'">Browse Jobs</button>
+  </section>
+
+  <section class="features">
+    <h2>Why Choose Us?</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <h3>Thousands of Jobs</h3>
+        <p>Access listings from leading companies across industries.</p>
+      </div>
+      <div class="feature">
+        <h3>Easy Application</h3>
+        <p>Apply with a simple form and track your progress.</p>
+      </div>
+      <div class="feature">
+        <h3>Career Resources</h3>
+        <p>Get tips, resume help, and interview prep.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Company Careers Portal</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

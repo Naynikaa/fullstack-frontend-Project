@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Details – Company Careers</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <h1>Company Careers</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+      <a href="#" id="dashboardLink" style="display: none;">Dashboard</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </nav>
+  </header>
+
+  <section class="details">
+    <h2 id="jobTitle">Job Title</h2>
+    <p><strong>Company:</strong> Company Name</p>
+    <p><strong>Location:</strong> Remote</p>
+    <p><strong>Type:</strong> Full-time</p>
+    <p><strong>Description:</strong> Detailed job description here. Responsibilities, requirements, etc.</p>
+    <button onclick="window.location.href='apply.html?job=' + encodeURIComponent(document.getElementById('jobTitle').textContent)">Apply Now</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Company Careers Portal</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

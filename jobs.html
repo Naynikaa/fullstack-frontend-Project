@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jobs – Company Careers</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <h1>Company Careers</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+      <a href="#" id="dashboardLink" style="display: none;">Dashboard</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </nav>
+  </header>
+
+  <section class="search">
+    <input type="text" id="searchInput" placeholder="Search jobs...">
+    <select id="filterCategory">
+      <option value="">All Categories</option>
+      <option value="tech">Tech</option>
+      <option value="finance">Finance</option>
+      <option value="marketing">Marketing</option>
+    </select>
+    <button onclick="filterJobs()">Search</button>
+  </section>
+
+  <section class="jobs" id="jobsList">
+    <!-- Tech Jobs (7+) -->
+    <div class="job" data-category="tech">
+      <h3>Software Engineer</h3>
+      <p>Company A - Full-time</p>
+      <button onclick="viewJob('Software Engineer')">View Details</button>
+    </div>
+    <div class="job" data-category="tech">
+      <h3>Frontend Developer</h3>
+      <p>TechCorp - Full-time</p>
+      <button onclick="viewJob('Frontend Developer')">View Details</button>
+    </div>
+    <div class="job" data-category="tech">
+      <h3>Backend Developer</h3>
+      <p>InnoTech - Full-time</p>
+      <button onclick="viewJob('Backend Developer')">View Details</button>
+    </div>
+    <div class="job" data-category="tech">
+      <h3>Data Scientist</h3>
+      <p>DataWorks - Full-time</p>
+      <button onclick="viewJob('Data Scientist')">View Details</button>
+    </div>
+    <div class="job" data-category="tech">
+      <h3>DevOps Engineer</h3>
+      <p>CloudSys - Full-time</p>
+      <button onclick="viewJob('DevOps Engineer')">View Details</button>
+    </div>
+    <div class="job" data-category="tech">
+      <h3>Mobile App Developer</h3>
+      <p>AppInnovate - Full-time</p>
+      <button onclick="viewJob('Mobile App Developer')">View Details</button>
+    </div>
+    <div class="job" data-category="tech">
+      <h3>AI Engineer</h3>
+      <p>AI Labs - Full-time</p>
+      <button onclick="viewJob('AI Engineer')">View Details</button>
+    </div>
+    <div class="job" data-category="tech">
+      <h3>Cybersecurity Analyst</h3>
+      <p>SecureNet - Full-time</p>
+      <button onclick="viewJob('Cybersecurity Analyst')">View Details</button>
+    </div>
+
+    <!-- Finance Jobs (7+) -->
+    <div class="job" data-category="finance">
+      <h3>Financial Analyst</h3>
+      <p>Company B - Full-time</p>
+      <button onclick="viewJob('Financial Analyst')">View Details</button>
+    </div>
+    <div class="job" data-category="finance">
+      <h3>Investment Banker</h3>
+      <p>BankPlus - Full-time</p>
+      <button onclick="viewJob('Investment Banker')">View Details</button>
+    </div>
+    <div class="job" data-category="finance">
+      <h3>Accountant</h3>
+      <p>FinanceHub - Full-time</p>
+      <button onclick="viewJob('Accountant')">View Details</button>
+    </div>
+    <div class="job" data-category="finance">
+      <h3>Risk Analyst</h3>
+      <p>RiskMgmt Inc. - Full-time</p>
+      <button onclick="viewJob('Risk Analyst')">View Details</button>
+    </div>
+    <div class="job" data-category="finance">
+      <h3>Financial Planner</h3>
+      <p>Wealth Advisors - Full-time</p>
+      <button onclick="viewJob('Financial Planner')">View Details</button>
+    </div>
+    <div class="job" data-category="finance">
+      <h3>Auditor</h3>
+      <p>AuditPro - Full-time</p>
+      <button onclick="viewJob('Auditor')">View Details</button>
+    </div>
+    <div class="job" data-category="finance">
+      <h3>Tax Consultant</h3>
+      <p>TaxExperts - Full-time</p>
+      <button onclick="viewJob('Tax Consultant')">View Details</button>
+    </div>
+    <div class="job" data-category="finance">
+      <h3>Portfolio Manager</h3>
+      <p>InvestCorp - Full-time</p>
+      <button onclick="viewJob('Portfolio Manager')">View Details</button>
+    </div>
+
+    <!-- Marketing Jobs (7+) -->
+    <div class="job" data-category="marketing">
+      <h3>Marketing Manager</h3>
+      <p>Company C - Full-time</p>
+      <button onclick="viewJob('Marketing Manager')">View Details</button>
+    </div>
+    <div class="job" data-category="marketing">
+      <h3>Digital Marketing Specialist</h3>
+      <p>MarketBoost - Full-time</p>
+      <button onclick="viewJob('Digital Marketing Specialist')">View Details</button>
+    </div>
+    <div class="job" data-category="marketing">
+      <h3>Content Creator</h3>
+      <p>ContentCo - Full-time</p>
+      <button onclick="viewJob('Content Creator')">View Details</button>
+    </div>
+    <div class="job" data-category="marketing">
+      <h3>SEO Analyst</h3>
+      <p>SearchOptimize - Full-time</p>
+      <button onclick="viewJob('SEO Analyst')">View Details</button>
+    </div>
+    <div class="job" data-category="marketing">
+      <h3>Social Media Manager</h3>
+      <p>SocialHub - Full-time</p>
+      <button onclick="viewJob('Social Media Manager')">View Details</button>
+    </div>
+    <div class="job" data-category="marketing">
+      <h3>Brand Strategist</h3>
+      <p>BrandMasters - Full-time</p>
+      <button onclick="viewJob('Brand Strategist')">View Details</button>
+    </div>
+    <div class="job" data-category="marketing">
+      <h3>Public Relations Specialist</h3>
+      <p>PR Pros - Full-time</p>
+      <button onclick="viewJob('Public Relations Specialist')">View Details</button>
+    </div>
+    <div class="job" data-category="marketing">
+      <h3>Market Research Analyst</h3>
+      <p>InsightData - Full-time</p>
+      <button onclick="viewJob('Market Research Analyst')">View Details</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Company Careers Portal</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
