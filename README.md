@@ -32,5 +32,3 @@ The next phase will include:
 * Job listings and applications stored in a database (MongoDB or MySQL)
 * Real-time status updates for submitted applications
 * Admin dashboard for job posting and user management
-Would you like me to make this **more customized** — for example, adding your GitHub link, your course name, and your batch (like “GPP 43 FSN – Sri Indu”)?
-I can format it like a professional project submission document.
